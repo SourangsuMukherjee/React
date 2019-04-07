@@ -5,20 +5,24 @@ import Rentals from "./component/rentals";
 import Customers from "./component/customers";
 import NotFound from "./component/notFound";
 import "./App.css";
+import NavBar from "./component/navBar";
 
 class App extends Component {
   render() {
     return (
-      <main className="App">
-        <Switch>
-          <Route path="/movies" component={Movies} />
-          <Route path="/customers" component={Customers} />
-          <Route path="/rentals" component={Rentals} />
-          <Route path="/not-found" component={NotFound} />
-          <Redirect from="/" exact to="/movies" />
-          <Redirect to="/not-found" />
-        </Switch>
-      </main>
+      <React.Fragment>
+        <NavBar />
+        <main className="App">
+          <Switch>
+            <Route path="/movies" component={Movies} />
+            <Route path="/customers" component={Customers} />
+            <Route path="/rentals" component={Rentals} />
+            <Route path="/not-found" component={NotFound} />
+            <Redirect from="/" exact to="/movies" />
+            <Redirect to="/not-found" />
+          </Switch>
+        </main>
+      </React.Fragment>
     );
   }
 }
