@@ -16,3 +16,8 @@ code {
 .clickable {
   cursor: pointer;
 }
+
+.navbar {
+  margin: 20px;
+  padding: 10px;
+}
